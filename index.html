@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YmcGame — Game Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            <span class="logo-y">Y</span>mcGame
+        </div>
+
+        <div class="header-right">
+            <div id="clock">12:00:00 AM</div>
+
+            <button id="themeBtn" class="icon-btn" title="Toggle theme">
+                🌙
+            </button>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    🎮 BROWSER GAME HUB
+                </div>
+
+                <h1>
+                    Your
+                    <span>Game</span>
+                    Hub
+                </h1>
+
+                <p>
+                    Find a game. Click play. Have fun.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button id="randomBtn" class="main-btn">
+                        🎲 Random Game
+                    </button>
+
+                    <button id="favoritesBtn" class="secondary-btn">
+                        ❤️ Favorites
+                    </button>
+
+                    <button id="recentBtn" class="secondary-btn">
+                        🕘 Recently Played
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="floating-game">🎮</div>
+                <div class="floating-game">🏎️</div>
+                <div class="floating-game">⚽</div>
+                <div class="floating-game">🧩</div>
+            </div>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>🎮</span>
+                <div>
+                    <strong id="totalGames">0</strong>
+                    <small>Total Games</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>👀</span>
+                <div>
+                    <strong id="visibleGames">0</strong>
+                    <small>Showing</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>❤️</span>
+                <div>
+                    <strong id="favoriteCount">0</strong>
+                    <small>Favorites</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>🕘</span>
+                <div>
+                    <strong id="recentCount">0</strong>
+                    <small>Recent</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="controls">
+
+            <div class="search-box">
+
+                <span>🔎</span>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search games..."
+                    autocomplete="off"
+                >
+
+                <kbd>/</kbd>
+
+            </div>
+
+
+            <div class="category-row" id="categories"></div>
+
+
+            <div class="view-row">
+
+                <button class="view-chip active" data-view="all">
+                    🎮 All Games
+                </button>
+
+                <button class="view-chip" data-view="favorites">
+                    ❤️ Favorites
+                </button>
+
+                <button class="view-chip" data-view="recent">
+                    🕘 Recent
+                </button>
+
+                <select id="sortSelect">
+                    <option value="featured">Featured</option>
+                    <option value="az">A → Z</option>
+                    <option value="za">Z → A</option>
+                    <option value="random">Random</option>
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <section class="games-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2 id="sectionTitle">All Games</h2>
+                    <p id="sectionSubtitle">
+                        Pick something and start playing.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div id="gamesGrid" class="games-grid"></div>
+
+
+            <div id="emptyState" class="empty-state hidden">
+
+                <div class="empty-icon">🎮</div>
+
+                <h3>No games found</h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+                <button id="clearSearchBtn" class="main-btn">
+                    Show All Games
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            <strong>YmcGame</strong>
+            <span> — Play. Discover. Repeat. 🎮</span>
+        </div>
+
+        <div class="shortcuts">
+            <span><kbd>/</kbd> Search</span>
+            <span><kbd>R</kbd> Random</span>
+            <span><kbd>F</kbd> Favorites</span>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
